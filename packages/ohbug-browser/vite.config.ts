@@ -15,6 +15,7 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: { resolveDepSubpath: true },
     dts: true,
     exports: true,
     sourcemap: true,

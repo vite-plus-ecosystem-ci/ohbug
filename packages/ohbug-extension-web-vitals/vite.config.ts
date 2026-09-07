@@ -9,9 +9,5 @@ export default defineConfig({
       },
     },
   },
-  pack: {
-    dts: true,
-    exports: true,
-    sourcemap: true,
-  },
+  pack: { deps: { resolveDepSubpath: true }, dts: true, exports: true, sourcemap: true },
 });

@@ -10,6 +10,9 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: { resolveDepSubpath: true },
+    // Fork smoke test: the existing webpack declarations cannot be bundled.
+    dts: false,
     entry: {
       index: "src/index.ts",
       vite: "src/vite.ts",

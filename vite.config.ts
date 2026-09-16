@@ -61,6 +61,7 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
     include: ["packages/**/src/**/*.test.ts", "packages/**/__tests__/**/*.test.ts"],
     environment: "jsdom",
     coverage: {

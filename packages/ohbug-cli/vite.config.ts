@@ -1,6 +1,7 @@
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  test: { clearMocks: false },
   run: {
     tasks: {
       build: {
@@ -10,6 +11,7 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: { resolveDepSubpath: true },
     entry: {
       index: "src/index.ts",
       ohbug: "src/bin/ohbug.ts",

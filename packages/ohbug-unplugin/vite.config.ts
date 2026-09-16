@@ -1,6 +1,7 @@
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  test: { clearMocks: false },
   run: {
     tasks: {
       build: {
@@ -10,6 +11,8 @@ export default defineConfig({
     },
   },
   pack: {
+    dts: false,
+    deps: { resolveDepSubpath: true },
     entry: {
       index: "src/index.ts",
       vite: "src/vite.ts",

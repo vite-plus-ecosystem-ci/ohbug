@@ -3,6 +3,7 @@ import { defineConfig } from "vite-plus";
 import pkg from "./package.json";
 
 export default defineConfig({
+  test: { clearMocks: false },
   define: {
     __VERSION__: JSON.stringify(pkg.version),
   },
@@ -15,6 +16,7 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: { resolveDepSubpath: true },
     dts: true,
     exports: true,
     sourcemap: true,

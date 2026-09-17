@@ -10,6 +10,10 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: {
+      resolveDepSubpath: true,
+      neverBundle: ["unplugin", "webpack", "postcss", "lightningcss", "vite", "vite-plus"],
+    },
     entry: {
       index: "src/index.ts",
       vite: "src/vite.ts",

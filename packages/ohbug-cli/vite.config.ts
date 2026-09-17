@@ -10,6 +10,7 @@ export default defineConfig({
     },
   },
   pack: {
+    deps: { resolveDepSubpath: true },
     entry: {
       index: "src/index.ts",
       ohbug: "src/bin/ohbug.ts",

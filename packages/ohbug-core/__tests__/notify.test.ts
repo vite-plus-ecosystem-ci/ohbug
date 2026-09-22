@@ -64,7 +64,7 @@ describe("@ohbug/core/notify", () => {
     });
 
     const result = await notify(event, client);
-    expect(result).toBeUndefined();
+    expect(result).toBeNull();
     expect(errorSpy).toHaveBeenCalledWith(error);
     errorSpy.mockRestore();
   });

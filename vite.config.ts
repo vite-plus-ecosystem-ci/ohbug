@@ -55,6 +55,7 @@ export default defineConfig({
     "*": "vp check --fix",
   },
   lint: {
+    ignorePatterns: ["playground/**"],
     options: {
       typeAware: true,
       typeCheck: true,

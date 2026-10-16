@@ -10,6 +10,9 @@ export default defineConfig({
     },
   },
   pack: {
+    // Ecosystem-ci smoke test: rolldown-plugin-dts cannot bundle the CommonJS
+    // webpack, tapable, and postcss declarations that the webpack entry pulls in.
+    dts: false,
     entry: {
       index: "src/index.ts",
       vite: "src/vite.ts",

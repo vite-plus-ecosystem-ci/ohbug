@@ -16,9 +16,9 @@ pnpm instal @ohbug/browser @ohbug/vue
 Vue3
 
 ```javascript
-import Vue from "vue";
 import Ohbug from "@ohbug/browser";
 import OhbugVue from "@ohbug/vue";
+import Vue from "vue";
 
 const client = Ohbug.setup({ apiKey: "YOUR_API_KEY" });
 
@@ -28,10 +28,11 @@ Vue.createApp(App).use(OhbugVue(client)).mount("#app");
 Vue2
 
 ```javascript
-import Vue from "vue";
-import App from "./App.vue";
 import Ohbug from "@ohbug/browser";
 import OhbugVue from "@ohbug/vue";
+import Vue from "vue";
+
+import App from "./App.vue";
 
 const client = Ohbug.setup({ apiKey: "YOUR_API_KEY" });
 OhbugVue(client).install(Vue);

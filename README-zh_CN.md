@@ -85,8 +85,8 @@ npm install @ohbug/browser @ohbug/angular
 ```
 
 ```ts
-import Ohbug from "@ohbug/browser";
 import createProvider from "@ohbug/angular";
+import Ohbug from "@ohbug/browser";
 
 const client = Ohbug.setup({ apiKey: "YOUR_API_KEY" });
 const provider = createProvider(client, ErrorHandler);

@@ -1,4 +1,4 @@
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, test, vi } from "vite-plus/test";
 
 import { Client } from "../src/client";
 import { defineExtension } from "../src/extension";
@@ -64,7 +64,7 @@ describe("@ohbug/core/notify", () => {
     });
 
     const result = await notify(event, client);
-    expect(result).toBeUndefined();
+    expect(result).toBeNull();
     expect(errorSpy).toHaveBeenCalledWith(error);
     errorSpy.mockRestore();
   });

@@ -1,3 +1,18 @@
 packages:
   - "packages/**"
   - playground
+overrides:
+  vite@*: "catalog:"
+  vitest@*: "catalog:"
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
+  vitest: 5.1.0
+  vite-plus: 0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
+  "@vitest/coverage-v8": 5.1.0
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: "*"
+    vitest: "*"

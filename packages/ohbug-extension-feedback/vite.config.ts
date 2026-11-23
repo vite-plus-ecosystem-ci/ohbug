@@ -16,7 +16,9 @@ export default defineConfig({
     tasks: {
       build: {
         command: "node build.mjs",
-        input: [{ auto: true }, "!dist/**", "!node_modules/**"],
+        cache: {
+          input: [{ auto: true }, "!dist/**", "!node_modules/**"],
+        },
       },
     },
   },
